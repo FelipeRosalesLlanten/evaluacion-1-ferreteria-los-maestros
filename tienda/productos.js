@@ -8,7 +8,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Polpaico</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Cementos</li>
             <li>Unidad de venta: Saco</li>
         </ul>
@@ -24,7 +24,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Melón</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Cementos</li>
             <li>Unidad de venta: Saco</li>
         </ul> 
@@ -40,7 +40,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Volcán</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Morteros</li>
             <li>Unidad de venta: Saco</li>
         </ul>
@@ -56,7 +56,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Weber</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Morteros</li>
             <li>Unidad de venta: Saco</li>
         </ul>
@@ -72,7 +72,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Granel</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Áridos</li>
             <li>Unidad de venta: Saco</li>
         </ul>
@@ -88,7 +88,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Granel</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Áridos</li>
             <li>Unidad de venta: Saco</li>
         </ul>
@@ -103,7 +103,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Local</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Ladrillos</li>
             <li>Unidad de venta: Unidad</li>
         </ul>
@@ -118,7 +118,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Melón</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Ladrillos</li>
             <li>Unidad de venta: Unidad</li>
         </ul>
@@ -133,7 +133,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Volcán</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Bloques</li>
             <li>Unidad de venta: Unidad</li>
         </ul>
@@ -149,7 +149,7 @@ const productosTienda = [
         <h4>Especificaciones Técnicas:</h4>
         <ul>
             <li>Marca: Ytong</li>
-            <li>Categoría: Materiales Construcción</li>
+            <li>Categoría: Mat. Construcción</li>
             <li>Subcategoría: Bloques</li>
             <li>Unidad de venta: Unidad</li>
         </ul>
@@ -1357,3 +1357,77 @@ const productosTienda = [
         imagen: "img/JA005.jpg"
     }
 ];
+
+
+
+// LÓGICA PARA MOSTRAR LOS PRODUCTOS SEGUN CATEGORIA
+
+const contenedorProductos = document.getElementById('catalogoProductos');
+const tituloCatalogo = document.getElementById('tituloCatalogo');
+
+if (contenedorProductos) {
+    
+    const parametros = new URLSearchParams(window.location.search);
+    const categoriaFiltro = parametros.get('cat');
+    
+    const categoriasValidas = {
+        'construccion': 'Mat. Construcción',
+        'pinturas': 'Pinturas',
+        'herramientas': 'Herramientas',
+        'gasfiteria': 'Gasfitería',
+        'electricidad': 'Electricidad',
+        'tornilleria': 'Tornillería',
+        'madera': 'Madera',
+        'seguridad': 'Seguridad',
+        'jardin': 'Jardín'
+    };
+
+    let productosAMostrar = productosTienda; // Por defecto, mostramos todos
+    
+    if (categoriaFiltro && categoriasValidas[categoriaFiltro]) {
+        const categoriaReal = categoriasValidas[categoriaFiltro];
+        
+        productosAMostrar = productosTienda.filter(prod => prod.descripcion.includes("Categoría: " + categoriaReal));
+        
+        if (tituloCatalogo) {
+            tituloCatalogo.textContent = categoriaReal;
+        }
+    }
+
+    let htmlTarjetas = '';
+    
+    productosAMostrar.forEach(producto => {
+
+        const precioFormateado = "$" + producto.precio.toLocaleString('es-CL');
+
+        htmlTarjetas += `
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="${producto.imagen}" class="card-img-top p-3" alt="${producto.nombre}" style="object-fit: contain; height: 200px;">
+                    
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-title fw-bold text-uppercase">${producto.nombre}</h6>
+                        <p class="card-text text-primary fw-bold fs-4">${precioFormateado}</p>
+                        
+                        <!-- Botón colapsable para la descripción HTML que armaste -->
+                        <button class="btn btn-outline-secondary btn-sm mb-3 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#desc-${producto.id}" aria-expanded="false" aria-controls="desc-${producto.id}">
+                            Ver Especificaciones &#9660;
+                        </button>
+                        <div class="collapse mb-3" id="desc-${producto.id}">
+                            <div class="card card-body bg-light text-muted p-2" style="font-size: 0.85rem;">
+                                ${producto.descripcion}
+                            </div>
+                        </div>
+                        
+                        <!-- Botón de añadir al carrito que usaremos después -->
+                        <button class="btn btn-dark w-100 mt-auto fw-bold" onclick="alert('Próximamente: Añadir ${producto.nombre} al carrito!')">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    contenedorProductos.innerHTML = htmlTarjetas;
+}
