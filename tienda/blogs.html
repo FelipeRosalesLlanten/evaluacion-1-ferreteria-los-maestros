@@ -1,29 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK A BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Blogs</title>
+    <!-- LINK A TU CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <title>Blogs - Ferretería Los Maestros</title>
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
-<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- BARRA DE NAVEGACIÓN SUPERIOR (Igual a las demás para mantener coherencia) -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home.html">Ferretería Los Maestros</a>
+    <a class="navbar-brand fw-bold" href="home.html">Ferretería Los Maestros</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav ms-auto">
         <a class="nav-link" href="nosotros.html">Nosotros</a>
-        <a class="nav-link" href="blogs.html">Blogs</a>
+        <a class="nav-link active fw-semibold" href="blogs.html">Blogs</a>
         <a class="nav-link" href="contacto.html">Contacto</a>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- CONTENIDO PRINCIPAL DE BLOGS -->
+<div class="container my-5">
+    
+    <!-- Título Principal -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-uppercase">Noticias Importantes</h2>
+    </div>
+
+    <!-- NOTICIA 1 -->
+    <div class="bg-white p-4 p-md-5 rounded shadow-sm mb-5 border">
+        
+        <div class="row align-items-center">
+            
+            <!-- Textos a la izquierda -->
+            <div class="col-md-6 order-2 order-md-1 mt-4 mt-md-0">
+                <h3 class="fw-bold text-uppercase">Curiosidad #1: El primer clavo</h3>
+                <p class="text-muted">
+                    Descubre la historia del primer clavo que vendimos hace 22 años, una reliquia que aún conservamos en nuestra vitrina.
+                </p>
+                
+                <!-- Botón que despliega el detalle -->
+                <button class="btn btn-outline-dark text-uppercase mt-3 fw-bold rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#detalleBlog1" aria-expanded="false" aria-controls="detalleBlog1" style="border-width: 2px;">
+                    Ver Caso &#9660;
+                </button>
+            </div>
+            
+            <!-- Imagen a la derecha -->
+            <div class="col-md-6 order-1 order-md-2">
+                <img src="../img/Noticia_1.jpg" class="img-blog-fija" alt="Imagen No Disponible">
+            </div>    
+            
+        </div>
+        
+        <!-- Texto que se despliega -->
+        <div class="collapse mt-4" id="detalleBlog1">
+            <div class="card card-body bg-light border-0 p-4">
+                <h4 class="fw-bold mb-3">La reliquia que inició todo</h4>
+                <p>
+                    Corría el año 2004 cuando abrimos nuestras puertas por primera vez. Nuestro primer cliente no fue un gran contratista, sino Doña Rosa, una vecina que necesitaba un solo clavo para colgar un cuadro. Ese clavo fue nuestro primer producto vendido. Hoy, conservamos la moneda con la que pagó y una réplica de ese clavo como símbolo de que en Ferretería Los Maestros, todo proyecto, por más pequeño que sea, es importante para nosotros.
+                </p>    
+            </div>
+        </div> 
+    </div>
+
+    <!-- NOTICIA 2 -->
+    <div class="bg-white p-4 p-md-5 rounded shadow-sm mb-5 border">
+        
+        <div class="row align-items-center">
+            
+            <!-- Textos a la izquierda -->
+            <div class="col-md-6 order-2 order-md-1 mt-4 mt-md-0">
+                <h3 class="fw-bold text-uppercase">Curiosidad #2: El Supervisor de cuatro patas</h3>
+                <p class="text-muted">
+                    Descubre la historia de Tuerca, el perrito que llegó buscando refugio y se convirtió en parte de nuestra historia.
+                </p>
+                
+                <!-- Botón que despliega el detalle -->
+                <button class="btn btn-outline-dark text-uppercase mt-3 fw-bold rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#detalleBlog2" aria-expanded="false" aria-controls="detalleBlog2" style="border-width: 2px;">
+                    Ver Caso &#9660;
+                </button>
+            </div>
+            
+            <!-- Imagen a la derecha -->
+            <div class="col-md-6 order-1 order-md-2">
+                <img src="../img/Noticia_2.avif" class="img-blog-fija" alt="Imagen No Disponible">
+            </div>    
+            
+        </div>
+        
+        <!-- Texto que se despliega -->
+        <div class="collapse mt-4" id="detalleBlog2">
+            <div class="card card-body bg-light border-0 p-4">
+                <h4 class="fw-bold mb-3">El empleado más fiel</h4>
+                <p>
+                    Si nos visitaste hace algunos años, probablemente fuiste recibido por "Tuerca", un perrito mestizo que un día entró al local huyendo de la lluvia y decidió que este sería su nuevo hogar. Rápidamente se convirtió en nuestro supervisor de seguridad y saludaba moviendo la cola a cada vecino que entraba. Aunque Tuerca ya descansa, en su honor siempre mantenemos un pocillo con agua fresca en la entrada para todas las mascotas que acompañan a sus dueños a comprar sus herramientas.
+                </p>    
+            </div>
+        </div> 
+    </div>
+
+    <!-- NOTICIA 3 -->
+    <div class="bg-white p-4 p-md-5 rounded shadow-sm mb-5 border">
+        
+        <div class="row align-items-center">
+            
+            <!-- Textos a la izquierda -->
+            <div class="col-md-6 order-2 order-md-1 mt-4 mt-md-0">
+                <h3 class="fw-bold text-uppercase">Curiosidad #3: El café de las 8:00 AM</h3>
+                <p class="text-muted">
+                    Descubre el origen de nuestra tradición más querida.
+                </p>
+                
+                <!-- Botón que despliega el detalle -->
+                <button class="btn btn-outline-dark text-uppercase mt-3 fw-bold rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#detalleBlog3" aria-expanded="false" aria-controls="detalleBlog3" style="border-width: 2px;">
+                    Ver Caso &#9660;
+                </button>
+            </div>
+            
+            <!-- Imagen a la derecha -->
+            <div class="col-md-6 order-1 order-md-2">
+                <img src="../img/Noticia_3.jpg" class="img-blog-fija" alt="Imagen No Disponible">
+            </div>    
+            
+        </div>
+        
+        <!-- Texto que se despliega -->
+        <div class="collapse mt-4" id="detalleBlog3">
+            <div class="card card-body bg-light border-0 p-4">
+                <h4 class="fw-bold mb-3">Donde se planean las mejores obras</h4>
+                <p>
+                    En Ferretería Los Maestros nos tomamos muy en serio nuestro nombre y nuestra relación con los clientes. Hace unos años, notamos que los contratistas que llegaban apenas abríamos se quedaban conversando en el pasillo de gasfitería. Así que decidimos poner un pequeño termo con café de cortesía. Lo que empezó como un detalle para capear el frío matutino de La Serena, se convirtió en una tradición. Hoy, ese pequeño rincón es el "centro de reuniones" no oficial donde muchos maestros del barrio se conocen y terminan trabajando juntos en grandes proyectos.
+                </p>    
+            </div>
+        </div> 
+    </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
