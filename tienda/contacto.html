@@ -36,15 +36,52 @@
 
 
 
+<!-- Contenedor para darle limpieza y forma -->
+ <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5"> <!-- Esto controla el ancho de tu caja -->
+      <!-- Contenedor / Tarjeta de Bootstrap -->
+      <div class="card shadow p-4">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Formulario de contactos</h3>
+<!-- Caja de inputs contacto -->
+<form id="MiFormulario">
+<div class="mb-3">
+<label for="NombreInput" class="form-label">Nombre completo</label>
+<input type="text" class="form-control" id="NombreInput" placeholder="Juan Pérez" required>
+</div>
+
+
+<div class="mb-3">
+  <label for="EmailInput" class="form-label">Correo Electronico (Email)</label>
+  <input type="email" class="form-control" id="EmailInput" placeholder="Juancitoperez@example.com" required>
+</div>
+
+
+<div class="mb-3">
+  <label for="MensajeInput" class="form-label">Mensaje</label>
+  <textarea class="form-control" id="MensajeInput" rows="3"></textarea>
+</div>
+<!-- Div vacío donde mostraremos el mensaje -->
+<div id="mensajeAlerta"></div>
+<!-- AQUÍ VA EL BOTÓN DE SUBMIT -->
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+</form>
+        </div>
+      </div>
+      <!-- Fin del contenedor -->
+    </div>
+  </div>
+</div>
 
 
 
 
 
 
-
-
-
+<script src="../contacto.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
 </body>
 </html> 
