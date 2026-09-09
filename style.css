@@ -183,6 +183,10 @@ footer .enlaces-footer a:hover {
   text-decoration: underline;
 }
 
+
+
+/* ESTILOS QUE ESTOY USANDO ESPECIFICAMENTE YO (CATA) NO CAMBIAR DE ACA PARA ABAJO!! OWO*/
+
 /* Molde para que todas las fotos de los blogs se vean iguales */
 .img-blog-fija {
     width: 100%;
@@ -199,4 +203,23 @@ footer .enlaces-footer a:hover {
 .img-logo-barra {
     width: 100%;
     height: 30px;
+}
+
+/* EFECTO HOVER PARA EL DROPDOWN DE PRODUCTOS (Solo en PC) */
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu {
+        display: none;
+        margin-top: 0;
+    }
+    
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+        animation: fadeDropdown 0.3s ease; /* Pequeña animación para que se vea suave */
+    }
+}
+
+/* Animación de opacidad suave para el menú */
+@keyframes fadeDropdown {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
