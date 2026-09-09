@@ -1359,7 +1359,6 @@ const productosTienda = [
 ];
 
 
-
 // LÓGICA PARA MOSTRAR LOS PRODUCTOS SEGUN CATEGORIA
 
 const contenedorProductos = document.getElementById('catalogoProductos');
@@ -1382,7 +1381,7 @@ if (contenedorProductos) {
         'jardin': 'Jardín'
     };
 
-    let productosAMostrar = productosTienda; // Por defecto, mostramos todos
+    let productosAMostrar = productosTienda;
     
     if (categoriaFiltro && categoriasValidas[categoriaFiltro]) {
         const categoriaReal = categoriasValidas[categoriaFiltro];
@@ -1409,7 +1408,7 @@ if (contenedorProductos) {
                         <h6 class="card-title fw-bold text-uppercase">${producto.nombre}</h6>
                         <p class="card-text text-primary fw-bold fs-4">${precioFormateado}</p>
                         
-                        <!-- Botón colapsable para la descripción HTML que armaste -->
+                        <!-- Botón colapsable para la descripción HTML -->
                         <button class="btn btn-outline-secondary btn-sm mb-3 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#desc-${producto.id}" aria-expanded="false" aria-controls="desc-${producto.id}">
                             Ver Especificaciones &#9660;
                         </button>
@@ -1418,7 +1417,8 @@ if (contenedorProductos) {
                                 ${producto.descripcion}
                             </div>
                         </div>                      
-                        <button class="btn btn-dark w-100 mt-auto fw-bold">
+                        
+                        <button type="button" class="btn btn-dark w-100 mt-auto fw-bold" onclick="agregarAlCarrito('${producto.id}')">
                             Añadir al Carrito
                         </button>
                     </div>
@@ -1428,4 +1428,63 @@ if (contenedorProductos) {
     });
     
     contenedorProductos.innerHTML = htmlTarjetas;
+}
+
+
+// FUNCIÓN PARA AÑADIR AL CARRITO (LOCALSTORAGE)
+window.agregarAlCarrito = function(idProducto) {
+    try {
+        const productoSeleccionado = productosTienda.find(prod => prod.id === idProducto);
+        if (!productoSeleccionado) return; 
+
+        let carritoActual = JSON.parse(localStorage.getItem('carritoFerreteria')) || [];
+        const indiceEnCarrito = carritoActual.findIndex(item => item.id === idProducto);
+
+        if (indiceEnCarrito !== -1) {
+            carritoActual[indiceEnCarrito].cantidad += 1; 
+        } else {
+            carritoActual.push({ 
+                id: productoSeleccionado.id,
+                nombre: productoSeleccionado.nombre,
+                precio: productoSeleccionado.precio,
+                imagen: productoSeleccionado.imagen,
+                cantidad: 1
+            });
+        }
+
+        localStorage.setItem('carritoFerreteria', JSON.stringify(carritoActual));
+
+        // Llamamos a la notificación visual
+        mostrarNotificacion(`¡Producto agregado al carrito!`);
+        
+    } catch (error) {
+        console.error("Error al guardar en el carrito:", error);
+    }
+};
+
+// CONFIRMACIÓN VISUAL DE AGREGADO AL CARRITO
+function mostrarNotificacion(mensaje) {
+    const toast = document.createElement('div');
+    toast.textContent = mensaje;
+    
+    toast.style.position = 'fixed';
+    toast.style.bottom = '20px';
+    toast.style.right = '20px';
+    toast.style.backgroundColor = '#198754';
+    toast.style.color = 'white';
+    toast.style.padding = '15px 25px';
+    toast.style.borderRadius = '8px';
+    toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    toast.style.zIndex = '9999';
+    toast.style.fontWeight = 'bold';
+    toast.style.transition = 'opacity 0.5s ease-in-out';
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => {
+            toast.remove();
+        }, 500); 
+    }, 3000);
 }
