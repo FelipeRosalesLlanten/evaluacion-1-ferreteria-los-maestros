@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
-    <title>Home</title>
+    <title>Inicio - Ferretería Los Maestros</title>
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
 <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -25,6 +25,183 @@
     </div>
   </div>
 </nav>
+
+<!-- CARRUSEL DE IMAGENES -->
+<div id="carruselPrincipal" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="" class="d-block w-100" alt="Imagen no Disponible">
+    </div>
+    
+    <div class="carousel-item">
+      <img src="" class="d-block w-100" alt="Imagen no Disponible">
+    </div>
+    
+    <div class="carousel-item">
+      <img src="" class="d-block w-100" alt="Imagen no Disponible">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!-- TARJETAS DE PRODUCTOS -->
+<div class="container mb-5">
+    
+    <div class="text-center mb-4">
+        <h2 class="fw-bold" style="color: #2c3e50;">Nuestros Productos</h2>
+    </div>
+
+    <!-- para que se acomoden según pantalla: -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"> 
+        
+        <!-- PRODUCTO 1 -->
+        <div class="col">
+            <!-- La etiqueta <a> envuelve todo para que sea clickeable -->
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 1</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 2</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 3</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 4 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 4</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 5 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 5</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 6 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 6</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 7 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 7</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 8 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 8</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 9 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 9</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- PRODUCTO 10 -->
+        <div class="col">
+            <a href="#" class="text-decoration-none">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
+                    <div class="card-body">
+                        <h6 class="card-title text-dark">Nombre del Producto 10</h6>
+                        <p class="card-text text-primary fw-bold">$0000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div> 
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
