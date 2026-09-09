@@ -13,7 +13,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul>
         `,
-        imagen: "img/MC001.jpg"
+        imagen: "../img/img-productos/MC001.webp"
     },
     {
         id: "MC002",
@@ -29,7 +29,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul> 
         `,
-        imagen: "img/MC002.jpg"
+        imagen: "../img/img-productos/MC002.jpg"
     },
     {
         id: "MC003",
@@ -45,7 +45,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul>
         `,
-        imagen: "img/MC003.jpg"
+        imagen: "../img/img-productos/MC003.avif"
     },
     {
         id: "MC004",
@@ -61,7 +61,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul>
         `,
-        imagen: "img/MC004.jpg"
+        imagen: "../img/img-productos/MC004.webp"
     },
     {
         id: "MC005",
@@ -77,7 +77,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul>
         `,
-        imagen: "img/MC005.jpg"
+        imagen: "../img/img-productos/MC005.webp"
     },
     {
         id: "MC006",
@@ -93,7 +93,7 @@ const productosTienda = [
             <li>Unidad de venta: Saco</li>
         </ul>
         `,
-        imagen: "img/MC006.jpg"
+        imagen: "../img/img-productos/MC006.webp"
     },
     {
         id: "MC007",
@@ -108,7 +108,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MC007.jpg"
+        imagen: "../img/img-productos/MC007.jpg"
     },
     {
         id: "MC008",
@@ -123,7 +123,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MC008.jpg"
+        imagen: "../img/img-productos/MC008.webp"
     },
     {
         id: "MC009",
@@ -138,7 +138,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MC009.jpg"
+        imagen: "../img/img-productos/MC009.webp"
     },
     {
         id: "MC010",
@@ -154,7 +154,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MC010.jpg"
+        imagen: "../img/img-productos/MC010.jpg"
     },
     {
         id: "PT001",
@@ -170,7 +170,7 @@ const productosTienda = [
             <li>Unidad de venta: Galón</li>
         </ul>
         `,
-        imagen: "img/PT001.jpg"
+        imagen: "../img/img-productos/PT001.webp"
     },
     {
         id: "PT002",
@@ -186,7 +186,7 @@ const productosTienda = [
             <li>Unidad de venta: Envase 4L</li>
         </ul>
         `,
-        imagen: "img/PT002.jpg"
+        imagen: "../img/img-productos/PT002.webp"
     },
     {
         id: "PT003",
@@ -202,7 +202,7 @@ const productosTienda = [
             <li>Unidad de venta: Galón</li>
         </ul>
         `,
-        imagen: "img/PT003.jpg"
+        imagen: "../img/img-productos/PT003.webp"
     },
     {
         id: "PT004",
@@ -218,7 +218,7 @@ const productosTienda = [
             <li>Unidad de venta: 1/4 L</li>
         </ul>
         `,
-        imagen: "img/PT004.jpg"
+        imagen: "../img/img-productos/PT004.webp"
     },
     {
         id: "PT005",
@@ -234,7 +234,7 @@ const productosTienda = [
             <li>Unidad de venta: 1 litro</li>
         </ul>
         `,
-        imagen: "img/PT005.jpg"
+        imagen: "../img/img-productos/PT005.jpg"
     },
     {
         id: "PT006",
@@ -250,7 +250,7 @@ const productosTienda = [
             <li>Unidad de venta: Galón</li>
         </ul>
         `,
-        imagen: "img/PT006.jpg"
+        imagen: "../img/img-productos/PT006.webp"
     },
     {
         id: "PT007",
@@ -266,11 +266,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/PT007.jpg"
+        imagen: "../img/img-productos/PT007.webp"
     },
     {
         id: "PT008",
-        nombre: "Brocha cerda natural 3\"",
+        nombre: "Brocha cerda natural 3",
         precio: 1690,
         descripcion: `
         
@@ -282,7 +282,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/PT008.jpg"
+        imagen: "../img/img-productos/PT008.webp"
     },
     {
         id: "PT009",
@@ -298,7 +298,7 @@ const productosTienda = [
             <li>Unidad de venta: Rollo</li>
         </ul>
         `,
-        imagen: "img/PT009.jpg"
+        imagen: "../img/img-productos/PT009.webp"
     },
     {
         id: "HM001",
@@ -314,11 +314,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM001.jpg"
+        imagen: "../img/img-productos/HM001.webp"
     },
     {
         id: "HM002",
-        nombre: "Alicate universal 8\"",
+        nombre: "Alicate universal 8",
         precio: 7290,
         descripcion: `
         
@@ -330,7 +330,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM002.jpg"
+        imagen: "../img/img-productos/HM002.webp"
     },
     {
         id: "HM003",
@@ -346,7 +346,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM003.jpg"
+        imagen: "../img/img-productos/HM003.webp"
     },
     {
         id: "HM004",
@@ -362,11 +362,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM004.jpg"
+        imagen: "../img/img-productos/HM004.webp"
     },
     {
         id: "HM005",
-        nombre: "Llave ajustable 10\"",
+        nombre: "Llave ajustable 10",
         precio: 8490,
         descripcion: `
         
@@ -378,7 +378,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM005.jpg"
+        imagen: "../img/img-productos/HM005.webp"
     },
     {
         id: "HM006",
@@ -394,11 +394,11 @@ const productosTienda = [
             <li>Unidad de venta: Set</li>
         </ul>
         `,
-        imagen: "img/HM006.jpg"
+        imagen: "../img/img-productos/HM006.webp"
     },
     {
         id: "HM007",
-        nombre: "Serrucho 20\" 7 dientes por pulgada",
+        nombre: "Serrucho 20' 7 dientes por pulgada",
         precio: 9490,
         descripcion: `
         
@@ -410,7 +410,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM007.jpg"
+        imagen: "../img/img-productos/HM007.webp"
     },
     {
         id: "HM008",
@@ -426,7 +426,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM008.jpg"
+        imagen: "../img/img-productos/HM008.webp"
     },
     {
         id: "HM009",
@@ -442,7 +442,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM009.jpg"
+        imagen: "../img/img-productos/HM009.webp"
     },
     {
         id: "HM010",
@@ -458,7 +458,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HM010.jpg"
+        imagen: "../img/img-productos/HM010.webp"
     },
     {
         id: "HE001",
@@ -474,7 +474,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE001.jpg"
+        imagen: "../img/img-productos/HE001.webp"
     },
     {
         id: "HE002",
@@ -490,11 +490,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE002.jpg"
+        imagen: "../img/img-productos/HE002.webp"
     },
     {
         id: "HE003",
-        nombre: "Amoladora angular 4.5\" 800W",
+        nombre: "Amoladora angular 4.5' 800W",
         precio: 54990,
         descripcion: `
         
@@ -506,11 +506,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE003.jpg"
+        imagen: "../img/img-productos/HE003.webp"
     },
     {
         id: "HE004",
-        nombre: "Sierra circular 7-1/4\" 1200W",
+        nombre: "Sierra circular 7-1/4' 1200W",
         precio: 72990,
         descripcion: `
         
@@ -522,7 +522,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE004.jpg"
+        imagen: "../img/img-productos/HE004.webp"
     },
     {
         id: "HE005",
@@ -538,7 +538,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE005.jpg"
+        imagen: "../img/img-productos/HE005.webp"
     },
     {
         id: "HE006",
@@ -554,11 +554,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/HE006.jpg"
+        imagen: "../img/img-productos/HE006.webp"
     },
     {
         id: "GS001",
-        nombre: "Cañería PVC 1/2\" x 6m",
+        nombre: "Cañería PVC 1/2 x 6m",
         precio: 5490,
         descripcion: `
         
@@ -570,11 +570,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS001.jpg"
+        imagen: "../img/img-productos/GS001.jpg"
     },
     {
         id: "GS002",
-        nombre: "Cañería PVC 3/4\" x 6m",
+        nombre: "Cañería PVC 3/4 x 6m",
         precio: 7490,
         descripcion: `
         
@@ -586,11 +586,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS002.jpg"
+        imagen: "../img/img-productos/GS002.webp"
     },
     {
         id: "GS003",
-        nombre: "Cañería cobre 1/2\" x 5m",
+        nombre: "Cañería cobre 1/2 x 5m",
         precio: 17990,
         descripcion: `
         
@@ -602,11 +602,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS003.jpg"
+        imagen: "../img/img-productos/GS003.webp"
     },
     {
         id: "GS004",
-        nombre: "Codo PVC 1/2\" 90°",
+        nombre: "Codo PVC 1/2 90°",
         precio: 390,
         descripcion: `
         
@@ -618,11 +618,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS004.jpg"
+        imagen: "../img/img-productos/GS004.webp"
     },
     {
         id: "GS005",
-        nombre: "Te PVC 1/2\"",
+        nombre: "Tee PVC 1/2",
         precio: 450,
         descripcion: `
         
@@ -634,11 +634,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS005.jpg"
+        imagen: "../img/img-productos/GS005.webp"
     },
     {
         id: "GS006",
-        nombre: "Unión doble PVC 1/2\"",
+        nombre: "Unión doble PVC 1/2",
         precio: 320,
         descripcion: `
         
@@ -650,11 +650,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS006.jpg"
+        imagen: "../img/img-productos/GS006.webp"
     },
     {
         id: "GS007",
-        nombre: "Llave de paso esfera 1/2\" latón",
+        nombre: "Llave de paso esfera 1/2 latón",
         precio: 3490,
         descripcion: `
         
@@ -666,11 +666,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS007.jpg"
+        imagen: "../img/img-productos/GS007.webp"
     },
     {
         id: "GS008",
-        nombre: "Llave de paso esfera 3/4\" latón",
+        nombre: "Llave de paso esfera 3/4 latón",
         precio: 4990,
         descripcion: `
         
@@ -682,7 +682,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS008.jpg"
+        imagen: "../img/img-productos/GS008.webp"
     },
     {
         id: "GS009",
@@ -698,7 +698,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS009.jpg"
+        imagen: "../img/img-productos/GS009.webp"
     },
     {
         id: "GS010",
@@ -714,11 +714,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/GS010.jpg"
+        imagen: "../img/img-productos/GS010.webp"
     },
     {
         id: "GS011",
-        nombre: "Teflón 3/4\" x 12m",
+        nombre: "Teflón 3/4 x 12m",
         precio: 790,
         descripcion: `
         
@@ -730,7 +730,7 @@ const productosTienda = [
             <li>Unidad de venta: Rollo</li>
         </ul>
         `,
-        imagen: "img/GS011.jpg"
+        imagen: "../img/img-productos/GS011.webp"
     },
     {
         id: "GS012",
@@ -746,7 +746,7 @@ const productosTienda = [
             <li>Unidad de venta: Cartucho</li>
         </ul>
         `,
-        imagen: "img/GS012.jpg"
+        imagen: "../img/img-productos/GS012.webp"
     },
     {
         id: "EL001",
@@ -762,7 +762,7 @@ const productosTienda = [
             <li>Unidad de venta: Metro</li>
         </ul>
         `,
-        imagen: "img/EL001.jpg"
+        imagen: "../img/img-productos/EL001.webp"
     },
     {
         id: "EL002",
@@ -778,7 +778,7 @@ const productosTienda = [
             <li>Unidad de venta: Metro</li>
         </ul>
         `,
-        imagen: "img/EL002.jpg"
+        imagen: "../img/img-productos/EL002.webp"
     },
     {
         id: "EL003",
@@ -794,7 +794,7 @@ const productosTienda = [
             <li>Unidad de venta: Metro</li>
         </ul>
         `,
-        imagen: "img/EL003.jpg"
+        imagen: "../img/img-productos/EL003.webp"
     },
     {
         id: "EL004",
@@ -810,7 +810,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL004.jpg"
+        imagen: "../img/img-productos/EL004.webp"
     },
     {
         id: "EL005",
@@ -826,7 +826,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL005.jpg"
+        imagen: "../img/img-productos/EL005.webp"
     },
     {
         id: "EL006",
@@ -842,7 +842,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL006.jpg"
+        imagen: "../img/img-productos/EL006.webp"
     },
     {
         id: "EL007",
@@ -858,7 +858,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL007.jpg"
+        imagen: "../img/img-productos/EL007.webp"
     },
     {
         id: "EL008",
@@ -874,7 +874,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL008.jpg"
+        imagen: "../img/img-productos/EL008.jpg"
     },
     {
         id: "EL009",
@@ -890,7 +890,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL009.jpg"
+        imagen: "../img/img-productos/EL009.webp"
     },
     {
         id: "EL010",
@@ -906,7 +906,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL010.jpg"
+        imagen: "../img/img-productos/EL010.webp"
     },
     {
         id: "EL011",
@@ -922,7 +922,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL011.jpg"
+        imagen: "../img/img-productos/EL011.webp"
     },
     {
         id: "EL012",
@@ -938,7 +938,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL012.jpg"
+        imagen: "../img/img-productos/EL012.webp"
     },
     {
         id: "EL013",
@@ -954,11 +954,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/EL013.jpg"
+        imagen: "../img/img-productos/EL013.webp"
     },
     {
         id: "TR001",
-        nombre: "Tornillo autoperf. 8x1\" caja 100 unid.",
+        nombre: "Tornillo autoperf. 8x1 caja 100 unid.",
         precio: 2990,
         descripcion: `
         
@@ -970,7 +970,7 @@ const productosTienda = [
             <li>Unidad de venta: Caja</li>
         </ul>
         `,
-        imagen: "img/TR001.jpg"
+        imagen: "../img/img-productos/TR001.webp"
     },
     {
         id: "TR002",
@@ -986,7 +986,7 @@ const productosTienda = [
             <li>Unidad de venta: Caja</li>
         </ul>
         `,
-        imagen: "img/TR002.jpg"
+        imagen: "../img/img-productos/TR002.webp"
     },
     {
         id: "TR003",
@@ -1002,11 +1002,11 @@ const productosTienda = [
             <li>Unidad de venta: Caja</li>
         </ul>
         `,
-        imagen: "img/TR003.jpg"
+        imagen: "../img/img-productos/TR003.webp"
     },
     {
         id: "TR004",
-        nombre: "Taco fisher S6 bolsa 100 unid.",
+        nombre: "Taco fischer S6 bolsa 100 unid.",
         precio: 3190,
         descripcion: `
         
@@ -1018,11 +1018,11 @@ const productosTienda = [
             <li>Unidad de venta: Bolsa</li>
         </ul>
         `,
-        imagen: "img/TR004.jpg"
+        imagen: "../img/img-productos/TR004.webp"
     },
     {
         id: "TR005",
-        nombre: "Taco fisher S8 bolsa 50 unid.",
+        nombre: "Taco fischer S8 bolsa 50 unid.",
         precio: 2890,
         descripcion: `
         
@@ -1034,11 +1034,11 @@ const productosTienda = [
             <li>Unidad de venta: Bolsa</li>
         </ul>
         `,
-        imagen: "img/TR005.jpg"
+        imagen: "../img/img-productos/TR005.webp"
     },
     {
         id: "TR006",
-        nombre: "Perno hex. 3/8\" x 2\" c/tuerca y golilla",
+        nombre: "Perno hex. 3/8 x 2 c/tuerca y golilla",
         precio: 290,
         descripcion: `
         
@@ -1050,7 +1050,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/TR006.jpg"
+        imagen: "../img/img-productos/TR006.jpg"
     },
     {
         id: "TR007",
@@ -1066,7 +1066,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/TR007.jpg"
+        imagen: "../img/img-productos/TR007.webp"
     },
     {
         id: "TR008",
@@ -1082,11 +1082,11 @@ const productosTienda = [
             <li>Unidad de venta: Cartucho</li>
         </ul>
         `,
-        imagen: "img/TR008.jpg"
+        imagen: "../img/img-productos/TR008.jpg"
     },
     {
         id: "MD001",
-        nombre: "Pino cepillado 1x3\" x 3m",
+        nombre: "Pino cepillado 1x3 x 3m",
         precio: 4290,
         descripcion: `
         
@@ -1098,11 +1098,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MD001.jpg"
+        imagen: "../img/img-productos/MD001.webp"
     },
     {
         id: "MD002",
-        nombre: "Pino cepillado 2x4\" x 3m",
+        nombre: "Pino cepillado 2x4 x 3m",
         precio: 7490,
         descripcion: `
         
@@ -1114,7 +1114,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/MD002.jpg"
+        imagen: "../img/img-productos/MD002.webp"
     },
     {
         id: "MD003",
@@ -1130,7 +1130,7 @@ const productosTienda = [
             <li>Unidad de venta: Plancha</li>
         </ul>
         `,
-        imagen: "img/MD003.jpg"
+        imagen: "../img/img-productos/MD003.webp"
     },
     {
         id: "MD004",
@@ -1146,7 +1146,7 @@ const productosTienda = [
             <li>Unidad de venta: Plancha</li>
         </ul>
         `,
-        imagen: "img/MD004.jpg"
+        imagen: "../img/img-productos/MD004.webp"
     },
     {
         id: "MD005",
@@ -1162,7 +1162,7 @@ const productosTienda = [
             <li>Unidad de venta: Plancha</li>
         </ul>
         `,
-        imagen: "img/MD005.jpg"
+        imagen: "../img/img-productos/MD005.webp"
     },
     {
         id: "MD006",
@@ -1178,7 +1178,7 @@ const productosTienda = [
             <li>Unidad de venta: Plancha</li>
         </ul>
         `,
-        imagen: "img/MD006.jpg"
+        imagen: "../img/img-productos/MD006.webp"
     },
     {
         id: "MD007",
@@ -1194,7 +1194,7 @@ const productosTienda = [
             <li>Unidad de venta: Plancha</li>
         </ul>
         `,
-        imagen: "img/MD007.jpg"
+        imagen: "../img/img-productos/MD007.webp"
     },
     {
         id: "SE001",
@@ -1210,7 +1210,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/SE001.jpg"
+        imagen: "../img/img-productos/SE001.webp"
     },
     {
         id: "SE002",
@@ -1226,7 +1226,7 @@ const productosTienda = [
             <li>Unidad de venta: Par</li>
         </ul>
         `,
-        imagen: "img/SE002.jpg"
+        imagen: "../img/img-productos/SE002.webp"
     },
     {
         id: "SE003",
@@ -1242,7 +1242,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/SE003.jpg"
+        imagen: "../img/img-productos/SE003.webp"
     },
     {
         id: "SE004",
@@ -1258,7 +1258,7 @@ const productosTienda = [
             <li>Unidad de venta: Caja</li>
         </ul>
         `,
-        imagen: "img/SE004.jpg"
+        imagen: "../img/img-productos/SE004.avif"
     },
     {
         id: "SE005",
@@ -1274,11 +1274,11 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/SE005.jpg"
+        imagen: "../img/img-productos/SE005.webp"
     },
     {
         id: "JA001",
-        nombre: "Manguera riego 3/4\" x 25m",
+        nombre: "Manguera riego 3/4 x 25m",
         precio: 22990,
         descripcion: `
         
@@ -1290,7 +1290,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/JA001.jpg"
+        imagen: "../img/img-productos/JA001.webp"
     },
     {
         id: "JA002",
@@ -1306,7 +1306,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/JA002.jpg"
+        imagen: "../img/img-productos/JA002.webp"
     },
     {
         id: "JA003",
@@ -1322,7 +1322,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/JA003.jpg"
+        imagen: "../img/img-productos/JA003.webp"
     },
     {
         id: "JA004",
@@ -1338,7 +1338,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/JA004.jpg"
+        imagen: "../img/img-productos/JA004.webp"
     },
     {
         id: "JA005",
@@ -1354,7 +1354,7 @@ const productosTienda = [
             <li>Unidad de venta: Unidad</li>
         </ul>
         `,
-        imagen: "img/JA005.jpg"
+        imagen: "../img/img-productos/JA005.webp"
     }
 ];
 
@@ -1417,10 +1417,8 @@ if (contenedorProductos) {
                             <div class="card card-body bg-light text-muted p-2" style="font-size: 0.85rem;">
                                 ${producto.descripcion}
                             </div>
-                        </div>
-                        
-                        <!-- Botón de añadir al carrito que usaremos después -->
-                        <button class="btn btn-dark w-100 mt-auto fw-bold" onclick="alert('Próximamente: Añadir ${producto.nombre} al carrito!')">
+                        </div>                      
+                        <button class="btn btn-dark w-100 mt-auto fw-bold">
                             Añadir al Carrito
                         </button>
                     </div>
