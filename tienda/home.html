@@ -10,6 +10,32 @@
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
+<!-- ESTILOS QUE TENGO QUE METER LUEGO EN STYLES ACUERDATE -->
+    <style>
+        .categoria-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .categoria-card img {
+            transition: transform 0.5s ease;
+            height: 250px; 
+            object-fit: cover;
+        }
+        /* Efecto zoom suave al pasar el mouse */
+        .categoria-card:hover img {
+            transform: scale(1.1);
+        }
+        /* Fondo oscuro semi-transparente */
+        .categoria-overlay {
+            background: rgba(33, 37, 41, 0.6); 
+            transition: background 0.3s ease;
+        }
+        .categoria-card:hover .categoria-overlay {
+            background: rgba(33, 37, 41, 0.4); /* Se aclara un poco al pasar el mouse */
+        }
+    </style>
+
 <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container-fluid">
@@ -228,143 +254,130 @@
   </button>
 </div>
 
-
-<!-- TARJETAS DE PRODUCTOS -->
+<!-- TARJETAS DE CATEGORÍAS -->
 <div class="container mb-5">
     
-    <div class="text-center mb-4">
-        <h2 class="fw-bold" style="color: #2c3e50;">Nuestros Productos</h2>
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-uppercase" style="color: #2c3e50;">Explora Nuestras Categorías</h2>
+        <p class="text-muted">Encuentra todo lo que necesitas para tus proyectos</p>
     </div>
 
-    <!-- para que se acomoden según pantalla: -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"> 
+    <!-- Grid de 3 columnas para PC, 2 para Tablets, 1 para celulares -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> 
         
-        <!-- PRODUCTO 1 -->
+        <!-- CATEGORÍA: CONSTRUCCIÓN -->
         <div class="col">
-            <!-- La etiqueta <a> envuelve todo para que sea clickeable -->
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 1</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=construccion" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    
+                    <img src="../img/img-categorias/materiales_construccion.jpg" class="card-img" alt="Mat. Construcción">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Mat. Construcción</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 2 -->
+        <!-- CATEGORÍA: PINTURAS -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 2</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=pinturas" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/pinturas.jpg" class="card-img" alt="Pinturas">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Pinturas</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 3 -->
+        <!-- CATEGORÍA: HERRAMIENTAS -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 3</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=herramientas" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/herramientas.webp" class="card-img" alt="Herramientas">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Herramientas</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 4 -->
+        <!-- CATEGORÍA: GASFITERÍA -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 4</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=gasfiteria" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/gasfiteria.jpg" class="card-img" alt="Gasfitería">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Gasfitería</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 5 -->
+        <!-- CATEGORÍA: ELECTRICIDAD -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 5</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=electricidad" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/electricidad.webp" class="card-img" alt="Electricidad">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Electricidad</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 6 -->
+        <!-- CATEGORÍA: TORNILLERÍA -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 6</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=tornilleria" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/tornilleria.webp" class="card-img" alt="Tornillería">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Tornillería</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 7 -->
+        <!-- CATEGORÍA: MADERA -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 7</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=madera" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/madera.jpg" class="card-img" alt="Madera">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Madera</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 8 -->
+        <!-- CATEGORÍA: SEGURIDAD -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 8</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=seguridad" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/seguridad.webp" class="card-img" alt="Seguridad">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Seguridad</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- PRODUCTO 9 -->
+        <!-- CATEGORÍA: JARDÍN -->
         <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 9</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- PRODUCTO 10 -->
-        <div class="col">
-            <a href="#" class="text-decoration-none">
-                <div class="card h-100 shadow-sm text-center">
-                    <img src=" " class="card-img-top" alt="Imagen No Disponible">
-                    <div class="card-body">
-                        <h6 class="card-title text-dark">Nombre del Producto 10</h6>
-                        <p class="card-text text-primary fw-bold">$0000</p>
+            <a href="productos.html?cat=jardin" class="text-decoration-none">
+                <div class="card text-white border-0 shadow-sm categoria-card">
+                    <img src="../img/img-categorias/jardin.webp" class="card-img" alt="Jardín">
+                    <div class="card-img-overlay categoria-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h3 class="card-title fw-bold text-uppercase text-center text-white shadow-sm">Jardín</h3>
+                        <span class="btn btn-outline-light rounded-pill mt-3 px-4 fw-semibold border-2">VER CATEGORÍA</span>
                     </div>
                 </div>
             </a>
