@@ -205,6 +205,34 @@ footer .enlaces-footer a:hover {
     height: 30px;
 }
 
+.detalle-imagen {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.precio-detalle {
+  color: var(--color-primario);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.detalle-descripcion h4 {
+  color: var(--color-secundario);
+  font-size: 1.1rem;
+}
+
+.detalle-descripcion ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.producto-recomendado-imagen {
+  height: 180px;
+  object-fit: contain;
+}
+
 /* EFECTO HOVER PARA EL DROPDOWN DE PRODUCTOS (Solo en PC) */
 @media all and (min-width: 992px) {
     .navbar .dropdown-menu {

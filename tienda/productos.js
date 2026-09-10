@@ -1358,6 +1358,22 @@ const productosTienda = [
     }
 ];
 
+const carpetasCategorias = {
+    'Mat. Construcción': 'construccion',
+    'Pinturas': 'pinturas',
+    'Herramientas': 'herramientas',
+    'Gasfitería': 'gasfiteria',
+    'Electricidad': 'electricidad',
+    'Tornillería': 'tornilleria',
+    'Madera': 'madera',
+    'Seguridad': 'seguridad',
+    'Jardín': 'jardin'
+};
+
+function obtenerRutaImagen(producto) {
+    return producto.imagen;
+}
+
 
 // LÓGICA PARA MOSTRAR LOS PRODUCTOS SEGUN CATEGORIA
 
@@ -1402,11 +1418,15 @@ if (contenedorProductos) {
         htmlTarjetas += `
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="${producto.imagen}" class="card-img-top p-3" alt="${producto.nombre}" style="object-fit: contain; height: 200px;">
+                    <img src="${obtenerRutaImagen(producto)}" class="card-img-top p-3" alt="${producto.nombre}" style="object-fit: contain; height: 200px;">
                     
                     <div class="card-body d-flex flex-column">
                         <h6 class="card-title fw-bold text-uppercase">${producto.nombre}</h6>
                         <p class="card-text text-primary fw-bold fs-4">${precioFormateado}</p>
+
+                        <a class="btn btn-outline-primary btn-sm mb-3" href="detalle.html?id=${encodeURIComponent(producto.id)}">
+                            Ver detalle del producto
+                        </a>
                         
                         <!-- Botón colapsable para la descripción HTML -->
                         <button class="btn btn-outline-secondary btn-sm mb-3 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#desc-${producto.id}" aria-expanded="false" aria-controls="desc-${producto.id}">
