@@ -66,58 +66,50 @@
   </div>
 </nav>
 
-<!-- Título centrado -->
-<h1 class="text-center my-4"><span>Contacto</span></h1>
-
-<!-- Contenedor con la imagen centrada y un ancho controlado -->
-<div class="text-center">
-    <img src="../img/Logo.png" class="img-fluid logo-contacto" alt="Foto de logo para contacto">
-</div>
-
-
-
-<!-- Contenedor para darle limpieza y forma -->
- <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-5"> <!-- Esto controla el ancho de tu caja -->
-      <!-- Contenedor / Tarjeta de Bootstrap -->
-      <div class="card shadow p-4">
-        <div class="card-body">
-          <h3 class="card-title text-center mb-4">Formulario de contacto</h3>
-<!-- Caja de inputs contacto -->
-<form id="MiFormulario">
-<div class="mb-3">
-<label for="NombreInput" class="form-label">Nombre completo</label>
-<input type="text" class="form-control" id="NombreInput" placeholder="Juan Pérez" maxlength="100" required>
-</div>
-
-
-<div class="mb-3">
-  <label for="EmailInput" class="form-label">Correo Electronico (Email)</label>
-  <input type="email" class="form-control" id="EmailInput" placeholder="Juancitoperez@example.com" maxlength="100" required>
-</div>
-
-
-<div class="mb-3">
-  <label for="MensajeInput" class="form-label">Mensaje</label>
-  <textarea class="form-control" id="MensajeInput" rows="3"></textarea>
-</div>
-<!-- Div vacío donde mostraremos el mensaje -->
-<div id="mensajeAlerta"></div>
-<!-- AQUÍ VA EL BOTÓN DE SUBMIT -->
-            <div class="d-grid mt-4">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-</form>
-        </div>
-      </div>
-      <!-- Fin del contenedor -->
+<!-- CONTENIDO PRINCIPAL DE CONTACTO -->
+<div class="container my-5">
+    
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-uppercase">Contacto</h2>
     </div>
-  </div>
+
+    <div class="text-center mb-5">
+        <img src="../img/Logo.png" class="img-fluid" alt="Logo Ferretería" style="max-width: 350px;">
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6"> 
+            
+            <div class="bg-white p-4 p-md-5 rounded shadow-sm border">
+                <h3 class="fw-bold text-center mb-4" style="color: var(--color-secundario);">Formulario de contacto</h3>
+                
+                <form id="MiFormulario">
+                    <div class="mb-3 text-start">
+                        <label for="NombreInput" class="form-label fw-bold text-muted">Nombre completo</label>
+                        <input type="text" class="form-control bg-light" id="NombreInput" placeholder="Ej: Juan Pérez" maxlength="100" required>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                        <label for="EmailInput" class="form-label fw-bold text-muted">Correo Electrónico (Email)</label>
+                        <input type="email" class="form-control bg-light" id="EmailInput" placeholder="juan.perez@example.com" maxlength="100" required>
+                    </div>
+
+                    <div class="mb-4 text-start">
+                        <label for="MensajeInput" class="form-label fw-bold text-muted">Mensaje</label>
+                        <textarea class="form-control bg-light" id="MensajeInput" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                    </div>
+
+                    <div id="mensajeAlerta"></div>
+
+                    <div class="d-grid mt-4">
+                        <button type="submit" class="btn text-white fw-bold py-2" style="background-color: var(--color-primario);">Enviar Mensaje</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
 
 
 
