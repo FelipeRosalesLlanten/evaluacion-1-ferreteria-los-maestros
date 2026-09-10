@@ -57,6 +57,7 @@ const regionesYcomunas = {
 
 // USUARIOS DE PRUEBA
 const usuariosPrueba = [
+    { correo: "admin@admin.com", clave: "admin", rol: "Administrador", nombre: "Administrador General" },
     { correo: "profe@profesor.duoc.cl", clave: "1234", rol: "Administrador" },
     { correo: "vendedor@duoc.cl", clave: "1234", rol: "Vendedor" },
     { correo: "cliente@gmail.com", clave: "1234", rol: "Cliente" }
@@ -68,7 +69,7 @@ const usuariosPrueba = [
 // DOMINIOS DE CORREO PERMITIDOS
 function validarCorreo(correo) {
     const dominiosPermitidos = ['@duoc.cl', '@profesor.duoc.cl', '@gmail.com'];
-    return dominiosPermitidos.some(dominio => correo.endsWith(dominio));
+    return correo === 'admin@admin.com' || dominiosPermitidos.some(dominio => correo.endsWith(dominio));
 }
 
 // VALIDAR RUT CHILENO
@@ -159,7 +160,9 @@ if (formularioLogin) {
     }
 
     // 1. BUSCAR EL USUARIO EN LA BASE DE DATOS
-    const usuarioEncontrado = usuariosPrueba.find(u => u.correo === correo && u.clave === clave);
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    const usuarioEncontrado = [...usuariosPrueba, ...usuariosRegistrados]
+        .find(u => u.correo === correo && u.clave === clave);
 
     const contenedorAlerta = document.getElementById('alertaLogin');
 
@@ -233,6 +236,22 @@ if (formularioRegistro) {
     if (!isValid) return; // Si hay errores, no envía el formulario
 
     const nombre = document.getElementById('nombreRegistro').value;
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuariosRegistrados')) || [];
+    const nuevoUsuario = {
+        run: runInput.value,
+        nombre,
+        apellidos: document.getElementById('apellidoRegistro').value,
+        correo: correoInput.value,
+        clave: document.getElementById('claveRegistro').value,
+        fechaNacimiento: document.getElementById('fechaRegistro').value,
+        region: document.getElementById('regionRegistro').value,
+        comuna: document.getElementById('comunaRegistro').value,
+        direccion: document.getElementById('direccionRegistro').value,
+        rol: 'Cliente'
+    };
+
+    usuariosRegistrados.push(nuevoUsuario);
+    localStorage.setItem('usuariosRegistrados', JSON.stringify(usuariosRegistrados));
 
     const contenedorAlerta = document.getElementById('alertaRegistro');
     contenedorAlerta.innerHTML = `

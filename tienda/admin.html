@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de administración - Ferretería Los Maestros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div>
+                <a class="admin-brand" href="admin.html"><span class="admin-brand-mark">FM</span><span>Los Maestros</span></a>
+                <p class="admin-menu-label">Gestión</p>
+                <nav class="admin-nav" aria-label="Navegación de administración">
+                    <button class="admin-nav-link active" data-view="dashboard">▦ <span>Dashboard</span></button>
+                    <button class="admin-nav-link" data-view="orders">▤ <span>Órdenes</span></button>
+                    <button class="admin-nav-link" data-view="inventory">▥ <span>Inventario</span></button>
+                    <button class="admin-nav-link" data-view="reports">◒ <span>Reportes</span></button>
+                    <button class="admin-nav-link" data-view="workers">♙ <span>Trabajadores</span></button>
+                    <button class="admin-nav-link" data-view="customers">♧ <span>Customers</span></button>
+                </nav>
+            </div>
+            <nav class="admin-nav admin-nav-bottom" aria-label="Opciones de cuenta">
+                <button class="admin-nav-link" data-view="settings">⚙ <span>Settings</span></button>
+                <button class="admin-nav-link" data-view="profile">◎ <span>Perfil</span></button>
+                <button class="admin-nav-link" data-view="search">⌕ <span>Búsqueda</span></button>
+                <button class="admin-nav-link" data-view="help">? <span>Ayuda</span></button>
+                <a class="admin-nav-link admin-logout" href="home.html">↪ <span>Cerrar sesión</span></a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div>
+                    <p class="admin-eyebrow">Panel de control</p>
+                    <h1 id="adminViewTitle">Dashboard</h1>
+                </div>
+                <div class="admin-user-chip"><span id="adminAvatar">AG</span><span id="adminUserName">Administrador General</span></div>
+            </header>
+            <div id="adminContent" class="admin-content"></div>
+        </main>
+    </div>
+
+    <script src="productos.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

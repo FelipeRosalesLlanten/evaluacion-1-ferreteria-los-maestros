@@ -53,15 +53,31 @@ if (contenedorDetalle && producto) {
 	`;
 
 	document.getElementById('btnAgregarCarrito').addEventListener('click', () => {
-		const cantidad = Number(document.getElementById('cantidadProducto').value);
+		const cantidad = Number.parseInt(document.getElementById('cantidadProducto').value, 10);
 		const mensaje = document.getElementById('mensajeCarrito');
 
-		if (cantidad < 1) {
+		if (!Number.isInteger(cantidad) || cantidad < 1) {
 			mensaje.textContent = 'La cantidad debe ser igual o mayor que 1.';
 			mensaje.className = 'text-danger mt-3 mb-0';
 			return;
 		}
 
+		const carrito = JSON.parse(localStorage.getItem('carritoFerreteria')) || [];
+		const indiceProducto = carrito.findIndex(item => item.id === producto.id);
+
+		if (indiceProducto >= 0) {
+			carrito[indiceProducto].cantidad += cantidad;
+		} else {
+			carrito.push({
+				id: producto.id,
+				nombre: producto.nombre,
+				precio: producto.precio,
+				imagen: producto.imagen,
+				cantidad
+			});
+		}
+
+		localStorage.setItem('carritoFerreteria', JSON.stringify(carrito));
 		mensaje.textContent = `${cantidad} unidad(es) agregada(s) al carrito.`;
 		mensaje.className = 'text-success mt-3 mb-0';
 	});
