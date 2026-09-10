@@ -1428,10 +1428,6 @@ if (contenedorProductos) {
                             Ver detalle del producto
                         </a>
                         
-                        <!-- Botón colapsable para la descripción HTML -->
-                        <button class="btn btn-outline-secondary btn-sm mb-3 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#desc-${producto.id}" aria-expanded="false" aria-controls="desc-${producto.id}">
-                            Ver Especificaciones &#9660;
-                        </button>
                         <div class="collapse mb-3" id="desc-${producto.id}">
                             <div class="card card-body bg-light text-muted p-2" style="font-size: 0.85rem;">
                                 ${producto.descripcion}
