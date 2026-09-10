@@ -1,4 +1,3 @@
-// contacto.js
 
 // 1. Seleccionamos el formulario usando su ID
 const formulario = document.getElementById('MiFormulario');

@@ -1,12 +1,8 @@
-/* ==========================================================================
-   Hoja de Estilos Básica - Estilo Ferretería (Inspiración Ferretería Guzmán)
-   ========================================================================== */
-
-/* --- 1. Variables de Color y Fuentes --- */
+/* --- 1. Variables Globales y Tipografía --- */
 :root {
   --color-primario: #FF6600; /* Naranja ferretero típico para botones y ofertas */
   --color-secundario: #003366; /* Azul oscuro para encabezados y pies de página */
-  --color-fondo: #F4F6F8; /* Gris muy claro para el fondo de la página */
+  --color-fondo: #f8f9fa; /* Gris muy claro (bg-light de Bootstrap) */
   --color-texto: #333333; /* Gris oscuro para el texto normal */
   --color-blanco: #FFFFFF;
   --color-borde: #E0E0E0;
@@ -14,178 +10,65 @@
   --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* --- 2. Reset Básico --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: var(--fuente-principal);
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  line-height: 1.6;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-ul {
-  list-style: none;
+/* --- 2. Enlaces del Navbar --- */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
 }
 
-/* --- 3. Encabezado (Header) --- */
-header {
-  background-color: var(--color-secundario);
-  color: var(--color-blanco);
-  padding: 15px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-nav .nav-link:hover {
+    color: var(--color-primario) !important;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* --- 3. Tarjetas Globales (Blogs y Productos) --- */
+/* Unifica la calidad visual con animación suave y sombra */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Navegación del menú */
-nav ul {
-  display: flex;
-  gap: 20px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-nav ul li a {
-  color: var(--color-blanco);
-  font-weight: 500;
-  transition: color 0.3s ease;
+/* --- 4. Inicio (Home) - Tarjetas de Categorías --- */
+.categoria-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-nav ul li a:hover {
-  color: var(--color-primario);
+.categoria-card img {
+    transition: transform 0.5s ease;
+    height: 250px; 
+    object-fit: cover;
 }
 
-/* --- 4. Banner Principal (Hero Section) --- */
-.banner {
-  background-color: var(--color-blanco);
-  text-align: center;
-  padding: 60px 20px;
-  border-bottom: 5px solid var(--color-primario);
+.categoria-card:hover img {
+    transform: scale(1.1); /* Efecto de acercamiento de la foto de fondo */
 }
 
-.banner h1 {
-  font-size: 2.5rem;
-  color: var(--color-secundario);
-  margin-bottom: 10px;
+.categoria-overlay {
+    background: rgba(33, 37, 41, 0.6); 
+    transition: background 0.3s ease;
 }
 
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.categoria-card:hover .categoria-overlay {
+    background: rgba(33, 37, 41, 0.4); /* Se aclara un poco al pasar el mouse */
 }
 
-.btn-comprar {
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  padding: 12px 25px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-comprar:hover {
-  background-color: #e65c00; /* Un tono más oscuro de naranja */
-}
-
-/* --- 5. Grilla de Productos (Catálogo) --- */
-.seccion-productos {
-  padding: 40px 5%;
-}
-
-.seccion-productos h2 {
-  text-align: center;
-  color: var(--color-secundario);
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.grilla-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* Tarjeta de cada producto */
-.tarjeta-producto {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.tarjeta-producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.tarjeta-producto img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.tarjeta-producto h3 {
-  font-size: 1.1rem;
-  color: var(--color-secundario);
-  margin-bottom: 10px;
-}
-
-.precio {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--color-primario);
-  margin-bottom: 15px;
-  display: block;
-}
-
-/* --- 6. Pie de Página (Footer) --- */
-footer {
-  background-color: var(--color-secundario);
-  color: var(--color-blanco);
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
-}
-
-footer p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-footer .enlaces-footer {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-size: 0.85rem;
-}
-
-footer .enlaces-footer a:hover {
-  text-decoration: underline;
-}
-
-
-
-/* ESTILOS QUE ESTOY USANDO ESPECIFICAMENTE YO (CATA) NO CAMBIAR DE ACA PARA ABAJO!! OWO*/
 
 /* Molde para que todas las fotos de los blogs se vean iguales */
 .img-blog-fija {
@@ -198,6 +81,11 @@ footer .enlaces-footer a:hover {
 .img-carrito {
     width: 100%;
     height: 20px;
+    transition: transform 0.2s ease;
+}
+
+.img-carrito:hover {
+    transform: scale(1.1);
 }
 
 .img-logo-barra {
@@ -238,6 +126,7 @@ footer .enlaces-footer a:hover {
     .navbar .dropdown-menu {
         display: none;
         margin-top: 0;
+        border-radius: 8px;
     }
     
     .navbar .nav-item:hover .dropdown-menu {
@@ -304,3 +193,43 @@ footer .enlaces-footer a:hover {
 .admin-settings { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }.admin-settings label { color: #536278; }.admin-settings input { margin-right: 10px; accent-color: #f07832; }.admin-help-panel { text-align: center; max-width: 560px; margin-inline: auto; }.admin-help-icon { display: grid; place-items: center; width: 54px; height: 54px; margin: 0 auto 16px; border-radius: 50%; background: #fff2e9; color: #f07832; font-size: 1.6rem; font-weight: 700; }.admin-help-panel h3 { color: #10233f; }.admin-help-panel p { color: #778499; }.admin-help-phone { display: block; color: #e36e2e; font-size: 1.5rem; font-weight: 700; margin: 16px 0 5px; }.admin-help-panel small { color: #9aa4b1; }.admin-global-search { font-size: 1rem; padding: 14px; }.admin-search-results { margin-top: 20px; }.admin-search-results > div:not(.admin-empty) { display: flex; justify-content: space-between; padding: 14px 8px; border-bottom: 1px solid #edf0f4; }.admin-search-results strong { color: #e36e2e; font-size: .75rem; text-transform: uppercase; }.admin-search-results span { color: #43536a; }
 @media (max-width: 900px) { .admin-sidebar { width: 78px; flex-basis: 78px; padding-inline: 10px; }.admin-brand { justify-content: center; padding-inline: 0; }.admin-brand > span:last-child, .admin-menu-label, .admin-nav-link span { display: none; }.admin-nav-link { justify-content: center; }.admin-stat-grid { grid-template-columns: repeat(2, 1fr); }.admin-two-columns { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .admin-topbar, .admin-welcome { align-items: flex-start; flex-direction: column; }.admin-content { padding: 25px 4%; }.admin-stat-grid, .admin-person-grid { grid-template-columns: 1fr; }.admin-order-form { grid-template-columns: 1fr; }.admin-search-line { align-items: stretch; flex-direction: column; }.admin-search-line input { max-width: none; }.admin-table { min-width: 580px; } }
+
+/* contacto.html */
+.logo-contacto { width: 450px; }
+
+/* carrito.html */
+.borde-grueso { border-width: 2px !important; }
+.label-pequeno { font-size: 0.8rem; }
+.btn-pagar-verde { background-color: #FF6600 !important; border-color: #db5d09 !important; }
+
+/* carrito.js */
+.img-carrito-miniatura { height: 100px; width: 100px; object-fit: contain; }
+.ancho-cantidad { width: 110px; }
+
+/* productos.js */
+.img-producto-catalogo { object-fit: contain; height: 200px; }
+.texto-especificaciones { font-size: 0.85rem; }
+
+/* Notificación flotante (Toast) en productos.js */
+.toast-notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(#10233f);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.toast-oculto { opacity: 0; }
+
+/* detalle.js */
+.input-cantidad-detalle { max-width: 90px; }
+
+/* home.html */
+.btn-naranja-registro { background-color: #e65100; border: none; }
+.titulo-categorias { color: #2c3e50; }

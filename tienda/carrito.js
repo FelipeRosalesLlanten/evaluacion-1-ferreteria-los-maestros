@@ -35,7 +35,7 @@ function renderizarCarrito() {
                     
                     <!-- Imagen a la izquierda -->
                     <div class="col-4 col-md-3 text-center border-end pe-3">
-                        <img src="${producto.imagen}" class="img-fluid rounded" alt="${producto.nombre}" style="height: 100px; width: 100px; object-fit: contain;">
+                        <img src="${producto.imagen}" class="img-fluid rounded img-carrito-miniatura" alt="${producto.nombre}">
                     </div>
                     
                     <!-- Textos y controles -->
@@ -51,7 +51,7 @@ function renderizarCarrito() {
                                 <div class="d-flex flex-column align-items-end col-12 col-md-5 mt-2 mt-md-0">
                                     <p class="fw-bold mb-2 fs-5 text-dark">${precioFormat}</p>
                                     
-                                    <div class="input-group input-group-sm" style="width: 110px;">
+                                    <div class="input-group input-group-sm ancho-cantidad">
                                         <button class="btn btn-outline-dark fw-bold" type="button" onclick="cambiarCantidad(${index}, -1)">-</button>
                                         <input type="text" class="form-control text-center fw-bold bg-white" value="${producto.cantidad}" readonly>
                                         <button class="btn btn-outline-dark fw-bold" type="button" onclick="cambiarCantidad(${index}, 1)">+</button>
